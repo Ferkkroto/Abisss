@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Amor</title>
+    <style>
+        /* Asegura que el audio esté oculto */
+        #backgroundMusic {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Audio que se reproduce automáticamente -->
+    <audio id="backgroundMusic" src="audio2.mp3" preload="auto" loop></audio>
+
+    <div class="container">
+        <div id="gifContainer">
+            <img id="gifContainerImg" src="mocha.gif" alt="Ositos Iniciales">
+        </div>
+        <div id="happyGifContainer">
+            <img src="mocha5final.gif" alt="Ositos Felices" class="happy-gif">
+        </div>
+        <div id="happyGifContainer2">
+            <img src="mocha6final.gif" alt="Ositos Felices" class="happy-gif">
+        </div>
+        <div id="happyGifContainer3">
+            <img src="mocha7final.gif" alt="Ositos Felices" class="happy-gif">
+        </div>
+        <div id="happyGifContainer4">
+            <img src="mocha9final.gif" alt="Ositos Felices" class="happy-gif">
+        </div>
+
+        <div id="sadGifContainer" class="gif-container" style="display: none;">
+            <img src="mocha2.gif" alt="Osito Triste">
+        </div>
+        <div id="sadGifContainer1" class="gif-container" style="display: none;">
+            <img src="mocha3.gif" alt="Osito Triste">
+        </div>
+        <div id="sadGifContainer2" class="gif-container" style="display: none;">
+            <img src="mocha4.gif" alt="Osito Triste">
+        </div>
+
+        <h1 id="question">¿Mi Abiss❤️, quieres ser mi Media Naranja🫶?</h1>
+        <div id="messageContainer" style="display: none;"></div>
+
+        <button id="siBtn">Sí</button>
+        <button id="noBtn">No</button>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var audio = document.getElementById('backgroundMusic');
+            
+            // Función para intentar reproducir el audio
+            function playAudio() {
+                audio.play().catch(function(error) {
+                    console.log('No se pudo reproducir el audio:', error);
+                });
+            }
+
+            // Reproduce el audio cuando la página se carga
+            playAudio();
+
+            // Para manejar la reproducción en algunos navegadores que bloquean el audio automáticamente
+            window.addEventListener('click', playAudio);
+        });
+    </script>
+</body>
+</html>

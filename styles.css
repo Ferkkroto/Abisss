@@ -1,0 +1,142 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #484141;
+}
+
+.container {
+    text-align: center;
+}
+
+
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+}
+#siBtn {
+    padding: 10px 20px; 
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #320097; /* Verde */
+    color: white;
+    border: 2px solid #FFC0CB; /* Bordes rosa */
+    border-radius: 10px; /* Esquinas redondeadas */
+}
+
+#noBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #FF5733; /* Rojo */
+    color: white;
+    border: 2px solid #FFC0CB; /* Bordes rosa */
+    border-radius: 10px; /* Esquinas redondeadas */
+}
+#noBtn span {
+    font-size: 18px;
+    color: #fcf4f4; /* Cambia el color del texto según tus preferencias */
+    /* Otras propiedades de estilo aquí */
+}
+
+#siBtn:hover{
+    background-color: #053a03; /* Cambia a otro color en hover, puedes ajustar el valor según tus preferencias */
+}
+#noBtn:hover {
+    background-color: #641e0d; /* Cambia a otro color en hover, puedes ajustar el valor según tus preferencias */
+}
+.bg-green {
+    background-color: #e20075; /* Nuevo color de fondo verde */
+}
+
+#messageContainer {
+    font-size: 20px;
+    color: #121111; /* Color rojo */
+    font-family: 'YourDesiredFont', sans-serif; /* Reemplaza 'YourDesiredFont' con la fuente que desees */
+    text-shadow: 2px 2px 4px #000; /* Borde simulado */
+    animation: pulse 0.5s infinite alternate; /* Animación de palpitación más rápida */
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1); /* Zoom más grande */
+    }
+}
+
+.floating-image {
+    position: relative;
+    width: 50px; /* Ajusta el tamaño a 50 píxeles de ancho */
+    height: auto; /* Mantén la proporción original de la imagen */
+    display: none; /* Oculta inicialmente */
+    z-index: 10; /* Asegura que las imágenes estén por encima de otros elementos */
+}
+/* Estilos para los contenedores ocultos */
+#happyGifContainer,
+#happyGifContainer2,
+#happyGifContainer3,
+#happyGifContainer4 {
+    display: none;
+}
+
+/* Estilos para los GIFs felices */
+.happy-gif {
+    width: 200px; /* Ajusta el tamaño según tus necesidades */
+    height: 200px; /* Ajusta el tamaño según tus necesidades */
+    object-fit: cover; /* Mantiene la proporción del GIF sin deformar */
+}
+.gif-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px; /* Ajusta el ancho según tus necesidades */
+    height: 200px; /* Ajusta la altura según tus necesidades */
+    overflow: hidden;
+}
+.gif-container img {
+    max-width: 100%; /* Ajusta el tamaño máximo del GIF para que se ajuste al contenedor */
+    max-height: 100%; /* Ajusta el tamaño máximo del GIF para que se ajuste al contenedor */
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin distorsionar */
+}
+
+#question {
+    font-size: 25px; /* Tamaño del texto */
+    color: #FF5733; /* Color del texto, puedes cambiarlo a tu preferencia */
+    text-align: center; /* Centra el texto */
+    font-family: 'Arial', sans-serif; /* Fuente del texto, puedes usar cualquier fuente que prefieras */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Sombra para el texto */
+    margin: 20px 0; /* Espaciado vertical */
+    padding: 10px; /* Espaciado interno */
+    background: linear-gradient(45deg, #FFB6C1, #FF69B4); /* Fondo con gradiente */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra del contenedor */
+    display: inline-block; /* Asegura que el fondo y el padding se ajusten al contenido */
+}
+
+/* Estilos para la letra de la canción */
+#lyricsContainer {
+    position: fixed; /* Usa fixed para mantener el contenedor en la parte inferior de la ventana del navegador */
+    bottom: 0; /* Ubica el contenedor en la parte inferior */
+    left: 0; /* Alinea el contenedor con el borde izquierdo */
+    width: 100%; /* Ocupa todo el ancho de la ventana */
+    height: 100px; /* Ajusta la altura del contenedor según sea necesario */
+    overflow: hidden; /* Oculta el texto que no está visible en la ventana */
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    color: white; /* Color del texto */
+    font-size: 20px; /* Tamaño de la fuente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Asegura que el contenedor esté por encima de otros elementos */
+}
+
+
